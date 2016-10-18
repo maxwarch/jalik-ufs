@@ -31,7 +31,7 @@ UploadFS.StorePermissions = function (options) {
     };
     self.checkRemove = (userId, file) => {
         if (typeof self.remove === 'function') {
-            self.remove.call(self, userId, file);
+            return self.remove.call(self, userId, file);
         }
     };
     self.checkUpdate = (userId, file) => {
